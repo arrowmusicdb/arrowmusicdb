@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Arrow Music Command Center</title>
 
 <link rel="stylesheet" href="style.css">
@@ -21,7 +19,7 @@
 
 <div class="brand">
 
-<img src="logo.png" class="logo">
+<img src="logo.png" class="logo" alt="Arrow Music Logo">
 
 <div>
 
@@ -33,7 +31,12 @@
 
 </div>
 
-<div class="datetime">
+<div class="topRight">
+
+<div class="weather">
+🌤 <span id="weatherTemp">31°C</span>
+<span id="weatherCity">Jaipur</span>
+</div>
 
 <div id="clock">00:00:00</div>
 
@@ -55,7 +58,7 @@
 
 <h1>READY</h1>
 
-<p>Waiting For Artist...</p>
+<p>Waiting for Artist...</p>
 
 </div>
 
@@ -64,11 +67,8 @@
 <h2>🎧 STUDIO STATUS</h2>
 
 <p>✔ Mic Ready</p>
-
 <p>✔ Logic Pro Connected</p>
-
 <p>✔ Internet Connected</p>
-
 <p>✔ Speakers Ready</p>
 
 </div>
@@ -79,20 +79,20 @@
 
 <section class="centerPanel">
 
-<div class="hud">
+<div class="sessionBox">
 
-<div class="ring ring1"></div>
+<h2>CURRENT SESSION</h2>
 
-<div class="ring ring2"></div>
+<h1>ARROW MUSIC STUDIO</h1>
 
-<div class="ring ring3"></div>
-
-<img src="logo.png" class="centerLogo">
+<p>Recording • Mixing • Mastering</p>
 
 </div>
 
 <div class="visualizer">
 
+<div class="bar"></div>
+<div class="bar"></div>
 <div class="bar"></div>
 <div class="bar"></div>
 <div class="bar"></div>
@@ -114,9 +114,9 @@
 
 <h2>🌤 WEATHER</h2>
 
-<h1>31°C</h1>
+<h1 id="weatherMain">31°C</h1>
 
-<p>Jaipur</p>
+<p id="weatherText">Clear Sky</p>
 
 </div>
 
@@ -125,9 +125,7 @@
 <h2>📅 TODAY'S SCHEDULE</h2>
 
 <p>10:00 Recording</p>
-
 <p>02:00 Mixing</p>
-
 <p>07:00 Mastering</p>
 
 </div>
@@ -140,9 +138,9 @@
 
 <div>💾 NAS ONLINE</div>
 
-<div>🌐 INTERNET</div>
+<div>🌐 INTERNET CONNECTED</div>
 
-<div>💻 LOGIC PRO</div>
+<div>💻 LOGIC PRO READY</div>
 
 <div>🔊 SPEAKERS OK</div>
 
