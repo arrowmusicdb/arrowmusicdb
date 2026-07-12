@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Arrow Music Command Center</title>
 
@@ -21,7 +19,7 @@
 
 <header>
 
-<div class="leftHeader">
+<div class="brand">
 
 <img src="logo.png" class="logo">
 
@@ -35,7 +33,7 @@
 
 </div>
 
-<div class="rightHeader">
+<div class="datetime">
 
 <div id="clock">00:00:00</div>
 
@@ -45,9 +43,11 @@
 
 </header>
 
-<div class="container">
+<main class="dashboard">
 
-<aside class="left">
+<!-- LEFT -->
+
+<section class="leftPanel">
 
 <div class="card">
 
@@ -67,23 +67,25 @@
 
 <p>✔ Logic Pro Connected</p>
 
-<p>✔ Internet Online</p>
+<p>✔ Internet Connected</p>
 
 <p>✔ Speakers Ready</p>
 
 </div>
 
-</aside>
+</section>
 
-<section class="center">
+<!-- CENTER -->
+
+<section class="centerPanel">
 
 <div class="hud">
 
-<div class="ring r1"></div>
+<div class="ring ring1"></div>
 
-<div class="ring r2"></div>
+<div class="ring ring2"></div>
 
-<div class="ring r3"></div>
+<div class="ring ring3"></div>
 
 <img src="logo.png" class="centerLogo">
 
@@ -104,7 +106,9 @@
 
 </section>
 
-<aside class="right">
+<!-- RIGHT -->
+
+<section class="rightPanel">
 
 <div class="card">
 
@@ -118,7 +122,7 @@
 
 <div class="card">
 
-<h2>📅 TODAY</h2>
+<h2>📅 TODAY'S SCHEDULE</h2>
 
 <p>10:00 Recording</p>
 
@@ -128,24 +132,23 @@
 
 </div>
 
-</aside>
+</section>
 
-</div>
+</main>
 
 <footer>
 
-<div>💾 NAS : ONLINE</div>
+<div>💾 NAS ONLINE</div>
 
-<div>🌐 INTERNET : CONNECTED</div>
+<div>🌐 INTERNET</div>
 
-<div>💻 LOGIC PRO : READY</div>
+<div>💻 LOGIC PRO</div>
 
-<div>🔊 SPEAKERS : OK</div>
+<div>🔊 SPEAKERS OK</div>
 
 </footer>
 
 <script src="app.js"></script>
 
 </body>
-
 </html>
