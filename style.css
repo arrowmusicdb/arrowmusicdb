@@ -1,369 +1,208 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Orbitron',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron',sans-serif;
 }
 
 html,body{
-width:100%;
-height:100%;
-background:#07111f;
-overflow:hidden;
-color:#fff;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#07111f;
+    color:#fff;
 }
 
 body{
-display:flex;
-flex-direction:column;
+    display:flex;
+    flex-direction:column;
 }
 
 .background{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:
-radial-gradient(circle,#10294d 0%,#07111f 70%);
-z-index:-2;
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at center,#11345d 0%,#07111f 70%);
+    z-index:-2;
 }
 
 .background::after{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background-image:
-linear-gradient(rgba(0,255,255,.05) 1px,transparent 1px),
-linear-gradient(90deg,rgba(0,255,255,.05) 1px,transparent 1px);
-background-size:40px 40px;
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+    linear-gradient(rgba(0,255,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,255,255,.05) 1px,transparent 1px);
+    background-size:40px 40px;
 }
 
 header{
-
-height:90px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:0 30px;
-
-background:rgba(5,20,40,.55);
-
-backdrop-filter:blur(15px);
-
-border-bottom:1px solid rgba(0,255,255,.25);
-
+    height:90px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    background:rgba(0,20,40,.65);
+    border-bottom:1px solid rgba(0,255,255,.2);
 }
 
 .brand{
-
-display:flex;
-
-align-items:center;
-
-gap:18px;
-
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
 .logo{
-
-width:60px;
-
-height:60px;
-
-object-fit:contain;
-
+    width:60px;
+    height:60px;
+    object-fit:contain;
 }
 
 .brand h1{
-
-font-size:34px;
-
-color:#00eaff;
-
+    font-size:32px;
+    color:#00f0ff;
 }
 
 .brand p{
-
-font-size:14px;
-
-letter-spacing:3px;
-
-color:#8deeff;
-
+    font-size:13px;
+    color:#9cefff;
+    letter-spacing:4px;
 }
 
-.datetime{
+.topRight{
+    text-align:right;
+}
 
-text-align:right;
-
+.weather{
+    font-size:18px;
+    margin-bottom:8px;
+    color:#9cefff;
 }
 
 #clock{
-
-font-size:40px;
-
-font-weight:bold;
-
-color:#00ffff;
-
+    font-size:38px;
+    color:#00ffff;
+    font-weight:bold;
 }
 
 #date{
-
-font-size:15px;
-
-color:#9cefff;
-
-margin-top:5px;
-
+    font-size:15px;
+    color:#aefcff;
 }
 
 .dashboard{
-
-flex:1;
-
-display:grid;
-
-grid-template-columns:300px 1fr 300px;
-
-gap:20px;
-
-padding:20px;
-
-height:calc(100vh - 150px);
-
+    flex:1;
+    display:grid;
+    grid-template-columns:300px 1fr 300px;
+    gap:20px;
+    padding:20px;
 }
 
 .leftPanel,
 .rightPanel{
-
-display:flex;
-
-flex-direction:column;
-
-gap:20px;
-
+    display:flex;
+    flex-direction:column;
+    gap:20px;
 }
 
 .card{
-
-background:rgba(10,25,45,.65);
-
-border:1px solid rgba(0,255,255,.25);
-
-border-radius:20px;
-
-padding:20px;
-
-flex:1;
-
-box-shadow:0 0 25px rgba(0,255,255,.15);
-
+    flex:1;
+    background:rgba(10,25,45,.70);
+    border:1px solid rgba(0,255,255,.25);
+    border-radius:22px;
+    padding:22px;
+    box-shadow:0 0 20px rgba(0,255,255,.15);
 }
 
 .card h2{
-
-font-size:24px;
-
-color:#00eaff;
-
-margin-bottom:15px;
-
+    color:#00f0ff;
+    margin-bottom:15px;
 }
 
 .card h1{
-
-font-size:48px;
-
-color:#00ffff;
-
-margin-bottom:10px;
-
+    font-size:46px;
+    color:#00ffff;
+    margin-bottom:10px;
 }
 
 .card p{
-
-font-size:18px;
-
-margin:8px 0;
-
-color:white;
-
+    font-size:18px;
+    margin:10px 0;
 }
 
 .centerPanel{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-flex-direction:column;
-
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 .sessionBox{
+    width:90%;
+    max-width:720px;
+    min-height:260px;
+    border-radius:24px;
+    background:rgba(10,25,45,.70);
+    border:2px solid rgba(0,255,255,.25);
 
-width:100%;
-
-max-width:700px;
-
-height:280px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-flex-direction:column;
-
-background:rgba(10,25,45,.65);
-
-border:2px solid rgba(0,255,255,.25);
-
-border-radius:25px;
-
-box-shadow:0 0 35px rgba(0,255,255,.15);
-
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 .sessionBox h2{
-
-font-size:24px;
-
-color:#00eaff;
-
-margin-bottom:15px;
-
+    color:#00f0ff;
+    margin-bottom:20px;
 }
 
 .sessionBox h1{
-
-font-size:56px;
-
-color:#00ffff;
-
-margin-bottom:15px;
-
-text-align:center;
-
+    font-size:54px;
+    color:#00ffff;
+    margin-bottom:15px;
+    text-align:center;
 }
 
 .sessionBox p{
-
-font-size:22px;
-
-color:#b8ffff;
-
+    font-size:22px;
+    color:#bffcff;
 }
 
 .visualizer{
-
-margin-top:35px;
-
-display:flex;
-
-gap:8px;
-
-height:120px;
-
-align-items:flex-end;
-
+    margin-top:40px;
+    display:flex;
+    gap:8px;
+    height:120px;
+    align-items:flex-end;
 }
 
 .bar{
-
-width:12px;
-
-background:#00eaff;
-
-border-radius:20px;
-
-animation:music 1s infinite;
-
+    width:12px;
+    height:70px;
+    background:#00f0ff;
+    border-radius:20px;
+    animation:music 1s infinite;
 }
 
-.bar:nth-child(1){height:50px;}
-.bar:nth-child(2){height:80px;}
-.bar:nth-child(3){height:40px;}
-.bar:nth-child(4){height:110px;}
-.bar:nth-child(5){height:60px;}
-.bar:nth-child(6){height:100px;}
-.bar:nth-child(7){height:70px;}
-.bar:nth-child(8){height:90px;}
+.bar:nth-child(even){
+    animation-delay:.25s;
+}
 
 footer{
-
-height:60px;
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-align-items:center;
-
-text-align:center;
-
-background:#081523;
-
-border-top:1px solid rgba(0,255,255,.25);
-
-font-size:17px;
-
+    height:60px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    align-items:center;
+    text-align:center;
+    background:#081523;
+    border-top:1px solid rgba(0,255,255,.2);
+    font-size:16px;
 }
 
 @keyframes music{
 
 50%{
-
-transform:scaleY(.35);
-
-}
-
-}
-
-@media screen and (max-width:1920px){
-
-.dashboard{
-
-grid-template-columns:260px 1fr 260px;
-
-}
-
-.sessionBox{
-
-max-width:600px;
-
-}
-
-}
-
-@media screen and (max-width:1280px){
-
-.dashboard{
-
-grid-template-columns:220px 1fr 220px;
-
-}
-
-.card h1{
-
-font-size:36px;
-
-}
-
-.sessionBox h1{
-
-font-size:44px;
-
+height:25px;
 }
 
 }
