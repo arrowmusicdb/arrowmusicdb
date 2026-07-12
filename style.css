@@ -8,9 +8,9 @@ font-family:'Orbitron',sans-serif;
 html,body{
 width:100%;
 height:100%;
-overflow:hidden;
-background:#050914;
+background:#040913;
 color:white;
+overflow:hidden;
 }
 
 body{
@@ -18,7 +18,7 @@ display:flex;
 flex-direction:column;
 }
 
-.bg-grid{
+.background{
 position:fixed;
 inset:0;
 background:
@@ -34,12 +34,12 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:0 30px;
-background:rgba(5,20,40,.7);
-border-bottom:2px solid rgba(0,255,255,.2);
-backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(0,255,255,.2);
+background:rgba(0,20,40,.5);
+backdrop-filter:blur(12px);
 }
 
-.brand{
+.leftHeader{
 display:flex;
 align-items:center;
 gap:15px;
@@ -51,77 +51,70 @@ height:60px;
 object-fit:contain;
 }
 
-.brand h1{
+.leftHeader h1{
 font-size:32px;
-color:#00e8ff;
+color:#00eaff;
 }
 
-.brand p{
+.leftHeader p{
 font-size:13px;
-letter-spacing:3px;
-color:#87eaff;
+letter-spacing:4px;
+color:#7fe8ff;
 }
 
-.header-right{
+.rightHeader{
 text-align:right;
 }
 
-#weatherTemp{
-font-size:24px;
-color:#00ffff;
-}
-
-#time{
-font-size:36px;
+#clock{
+font-size:42px;
 font-weight:bold;
 color:#00ffff;
 }
 
 #date{
 font-size:15px;
-color:#9fefff;
+color:#9befff;
 }
 
-main{
+.container{
 flex:1;
 display:grid;
-grid-template-columns:25% 50% 25%;
-gap:20px;
-padding:20px;
+grid-template-columns:22% 56% 22%;
+gap:18px;
+padding:18px;
 }
 
 .left,
 .right{
 display:flex;
 flex-direction:column;
-gap:20px;
+gap:18px;
 }
 
 .card{
 flex:1;
 background:rgba(10,25,45,.65);
-border:2px solid rgba(0,255,255,.25);
+border:1px solid rgba(0,255,255,.25);
 border-radius:20px;
 padding:20px;
-box-shadow:0 0 20px rgba(0,255,255,.15);
+box-shadow:0 0 25px rgba(0,255,255,.12);
 }
 
 .card h2{
 color:#00eaff;
 margin-bottom:15px;
-font-size:28px;
+}
+
+.card h1{
+font-size:48px;
+color:#00ffff;
+margin-bottom:10px;
 }
 
 .card p{
-font-size:20px;
+font-size:18px;
 margin:8px 0;
-}
-
-.big{
-font-size:52px;
-font-weight:bold;
-color:#00ffff;
-text-shadow:0 0 20px cyan;
 }
 
 .center{
@@ -129,7 +122,6 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-position:relative;
 }
 
 .hud{
@@ -144,79 +136,62 @@ align-items:center;
 .centerLogo{
 width:220px;
 z-index:5;
+filter:drop-shadow(0 0 30px cyan);
 animation:float 4s ease-in-out infinite;
-filter:drop-shadow(0 0 25px cyan);
 }
 
 .ring{
 position:absolute;
-border:2px solid rgba(0,255,255,.25);
 border-radius:50%;
+border:2px solid rgba(0,255,255,.25);
 }
 
-.ring1{
+.r1{
 width:260px;
 height:260px;
-animation:spin 15s linear infinite;
+animation:spin 12s linear infinite;
 }
 
-.ring2{
+.r2{
 width:340px;
 height:340px;
-animation:spinReverse 20s linear infinite;
+animation:spinReverse 18s linear infinite;
 }
 
-.ring3{
+.r3{
 width:420px;
 height:420px;
-animation:spin 30s linear infinite;
-}
-
-.record{
-text-align:center;
-margin-top:10px;
-}
-
-.record h1{
-font-size:60px;
-color:#00ffff;
-text-shadow:0 0 25px cyan;
-}
-
-.record p{
-font-size:22px;
+animation:spin 24s linear infinite;
 }
 
 .visualizer{
 display:flex;
 gap:8px;
-height:120px;
 align-items:flex-end;
-margin-top:30px;
+height:120px;
+margin-top:25px;
 }
 
 .bar{
-width:14px;
-background:#00e8ff;
-border-radius:10px;
-animation:music 1s infinite ease-in-out;
+width:12px;
+height:60px;
+background:#00eaff;
+border-radius:8px;
+animation:music 1s infinite;
 }
 
-.bar:nth-child(1){height:50px;}
-.bar:nth-child(2){height:90px;}
-.bar:nth-child(3){height:40px;}
-.bar:nth-child(4){height:110px;}
-.bar:nth-child(5){height:70px;}
-.bar:nth-child(6){height:95px;}
-.bar:nth-child(7){height:45px;}
-.bar:nth-child(8){height:120px;}
-.bar:nth-child(9){height:75px;}
-.bar:nth-child(10){height:60px;}
-
-@keyframes music{
-50%{
-transform:scaleY(.3);
+.bar:nth-child(even){
+animation-delay:.3s;
 }
+
+footer{
+height:60px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+align-items:center;
+text-align:center;
+background:rgba(0,20,40,.6);
+border-top:1px solid rgba(0,255,255,.2);
 }
 
 @keyframes spin{
@@ -233,6 +208,12 @@ transform:rotate(-360deg);
 
 @keyframes float{
 50%{
-transform:translateY(-10px);
+transform:translateY(-12px);
+}
+}
+
+@keyframes music{
+50%{
+transform:scaleY(.35);
 }
 }
