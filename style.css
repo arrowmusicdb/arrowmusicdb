@@ -8,9 +8,9 @@ font-family:'Orbitron',sans-serif;
 html,body{
 width:100%;
 height:100%;
-background:#040913;
-color:white;
 overflow:hidden;
+background:#07111f;
+color:#fff;
 }
 
 body{
@@ -22,10 +22,18 @@ flex-direction:column;
 position:fixed;
 inset:0;
 background:
+radial-gradient(circle at center,#102846 0%,#07111f 70%);
+z-index:-2;
+}
+
+.background::after{
+content:"";
+position:absolute;
+inset:0;
+background-image:
 linear-gradient(rgba(0,255,255,.05) 1px,transparent 1px),
 linear-gradient(90deg,rgba(0,255,255,.05) 1px,transparent 1px);
 background-size:40px 40px;
-z-index:-1;
 }
 
 header{
@@ -34,35 +42,33 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:0 30px;
-border-bottom:1px solid rgba(0,255,255,.2);
-background:rgba(0,20,40,.5);
-backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(0,255,255,.25);
 }
 
-.leftHeader{
+.brand{
 display:flex;
 align-items:center;
-gap:15px;
+gap:18px;
 }
 
 .logo{
-width:60px;
-height:60px;
+width:58px;
+height:58px;
 object-fit:contain;
 }
 
-.leftHeader h1{
-font-size:32px;
+.brand h1{
+font-size:34px;
 color:#00eaff;
 }
 
-.leftHeader p{
-font-size:13px;
-letter-spacing:4px;
-color:#7fe8ff;
+.brand p{
+font-size:14px;
+letter-spacing:3px;
+color:#88ffff;
 }
 
-.rightHeader{
+.datetime{
 text-align:right;
 }
 
@@ -73,43 +79,44 @@ color:#00ffff;
 }
 
 #date{
-font-size:15px;
-color:#9befff;
+font-size:16px;
+color:#9efcff;
 }
 
-.container{
+.dashboard{
 flex:1;
 display:grid;
-grid-template-columns:22% 56% 22%;
-gap:18px;
-padding:18px;
+grid-template-columns:300px 1fr 300px;
+gap:20px;
+padding:20px;
 }
 
-.left,
-.right{
+.leftPanel,
+.rightPanel{
 display:flex;
 flex-direction:column;
-gap:18px;
+gap:20px;
 }
 
 .card{
 flex:1;
-background:rgba(10,25,45,.65);
-border:1px solid rgba(0,255,255,.25);
+background:rgba(15,30,55,.75);
+border:2px solid rgba(0,255,255,.25);
 border-radius:20px;
-padding:20px;
-box-shadow:0 0 25px rgba(0,255,255,.12);
+padding:22px;
+box-shadow:0 0 25px rgba(0,255,255,.15);
 }
 
 .card h2{
+font-size:24px;
+margin-bottom:18px;
 color:#00eaff;
-margin-bottom:15px;
 }
 
 .card h1{
-font-size:48px;
+font-size:52px;
+margin-bottom:12px;
 color:#00ffff;
-margin-bottom:10px;
 }
 
 .card p{
@@ -117,7 +124,7 @@ font-size:18px;
 margin:8px 0;
 }
 
-.center{
+.centerPanel{
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -126,8 +133,8 @@ align-items:center;
 
 .hud{
 position:relative;
-width:420px;
-height:420px;
+width:430px;
+height:430px;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -136,8 +143,7 @@ align-items:center;
 .centerLogo{
 width:220px;
 z-index:5;
-filter:drop-shadow(0 0 30px cyan);
-animation:float 4s ease-in-out infinite;
+filter:drop-shadow(0 0 25px cyan);
 }
 
 .ring{
@@ -146,70 +152,61 @@ border-radius:50%;
 border:2px solid rgba(0,255,255,.25);
 }
 
-.r1{
-width:260px;
-height:260px;
-animation:spin 12s linear infinite;
+.ring1{
+width:220px;
+height:220px;
+animation:spin 10s linear infinite;
 }
 
-.r2{
-width:340px;
-height:340px;
+.ring2{
+width:320px;
+height:320px;
 animation:spinReverse 18s linear infinite;
 }
 
-.r3{
+.ring3{
 width:420px;
 height:420px;
-animation:spin 24s linear infinite;
+animation:spin 26s linear infinite;
 }
 
 .visualizer{
+margin-top:35px;
 display:flex;
-gap:8px;
 align-items:flex-end;
+gap:8px;
 height:120px;
-margin-top:25px;
 }
 
 .bar{
 width:12px;
 height:60px;
-background:#00eaff;
-border-radius:8px;
+background:#00ffff;
+border-radius:20px;
 animation:music 1s infinite;
 }
 
 .bar:nth-child(even){
-animation-delay:.3s;
+animation-delay:.25s;
 }
 
 footer{
-height:60px;
+height:65px;
 display:grid;
 grid-template-columns:repeat(4,1fr);
 align-items:center;
 text-align:center;
-background:rgba(0,20,40,.6);
-border-top:1px solid rgba(0,255,255,.2);
+border-top:1px solid rgba(0,255,255,.25);
+background:#081523;
+font-size:18px;
 }
 
 @keyframes spin{
-100%{
-transform:rotate(360deg);
-}
+100%{transform:rotate(360deg);}
 }
 
 @keyframes spinReverse{
-100%{
-transform:rotate(-360deg);
-}
-}
-
-@keyframes float{
-50%{
-transform:translateY(-12px);
-}
+100%{transform:rotate(-360deg);}
 }
 
 @keyframes music{
