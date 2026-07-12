@@ -6,187 +6,181 @@ font-family:'Orbitron',sans-serif;
 }
 
 body{
-
-background:#05070b;
+background:#050912;
 color:white;
-
 overflow:hidden;
+}
 
+.background-grid{
+position:fixed;
+inset:0;
+background:
+linear-gradient(rgba(0,255,255,.05) 1px,transparent 1px),
+linear-gradient(90deg,rgba(0,255,255,.05) 1px,transparent 1px);
+background-size:40px 40px;
+z-index:-2;
 }
 
 header{
-
+height:90px;
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
-padding:20px 40px;
-
-height:110px;
-
-border-bottom:1px solid #00bfff55;
-
-background:rgba(10,20,40,.5);
-
-backdrop-filter:blur(15px);
-
+padding:0 40px;
+background:rgba(0,20,40,.55);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(0,255,255,.25);
 }
 
-.logo img{
-
-height:70px;
-
+.brand{
+display:flex;
+align-items:center;
+gap:18px;
 }
 
-.title h1{
-
-font-size:42px;
-
-color:#00d9ff;
-
-text-shadow:0 0 20px cyan;
-
+.logo{
+width:65px;
 }
 
-.title p{
-
-color:#7fdfff;
-
-margin-top:8px;
-
+.brand h1{
+font-size:32px;
+color:#00e5ff;
 }
 
-.clock{
+.brand p{
+color:#8adfff;
+font-size:14px;
+letter-spacing:4px;
+}
 
+.clock-area{
 text-align:right;
-
 }
 
 #time{
-
-font-size:42px;
-
-font-weight:bold;
-
+font-size:36px;
+font-weight:700;
 color:#00ffff;
-
 }
 
 #date{
-
-margin-top:10px;
-
-font-size:18px;
-
-color:#8fdfff;
-
+font-size:16px;
+margin-top:6px;
+color:#8adfff;
 }
 
 main{
-
 display:grid;
-
 grid-template-columns:320px 1fr 320px;
-
-height:calc(100vh - 110px);
-
-padding:25px;
-
-gap:25px;
-
+height:calc(100vh - 90px);
+gap:20px;
+padding:20px;
 }
 
 .card{
-
-background:rgba(20,30,50,.55);
-
-border:1px solid #00c3ff55;
-
-border-radius:20px;
-
-padding:20px;
-
+background:rgba(10,30,50,.45);
+border:1px solid rgba(0,255,255,.25);
+border-radius:22px;
+padding:22px;
 margin-bottom:20px;
-
-box-shadow:0 0 20px rgba(0,255,255,.15);
-
+backdrop-filter:blur(20px);
+box-shadow:0 0 25px rgba(0,255,255,.08);
 }
 
 .card h2{
-
 color:#00e5ff;
-
-margin-bottom:15px;
-
+margin-bottom:20px;
 }
 
-.logo-big{
+.number{
+font-size:40px;
+font-weight:bold;
+color:#00ffff;
+text-shadow:0 0 18px cyan;
+margin-bottom:10px;
+}
 
+.center-panel{
+position:relative;
 display:flex;
-
+flex-direction:column;
 justify-content:center;
-
 align-items:center;
-
-margin-top:20px;
-
 }
 
-.logo-big img{
+.center-logo{
+width:240px;
+filter:drop-shadow(0 0 30px cyan);
+z-index:5;
+animation:float 5s ease-in-out infinite;
+}
 
-width:320px;
+.ring{
+position:absolute;
+border:2px solid rgba(0,255,255,.35);
+border-radius:50%;
+animation:spin 15s linear infinite;
+}
 
-filter:drop-shadow(0 0 25px cyan);
+.ring1{
+width:300px;
+height:300px;
+}
 
-animation:float 4s ease-in-out infinite;
+.ring2{
+width:420px;
+height:420px;
+animation-direction:reverse;
+}
 
+.ring3{
+width:520px;
+height:520px;
+animation-duration:25s;
+}
+
+.record-box{
+margin-top:25px;
+text-align:center;
+}
+
+.record-box h1{
+font-size:46px;
+color:#00ffff;
 }
 
 .visualizer{
-
-display:flex;
-
-justify-content:center;
-
-align-items:flex-end;
-
-height:220px;
-
-gap:8px;
-
 margin-top:40px;
-
+display:flex;
+gap:8px;
+align-items:flex-end;
+height:140px;
 }
 
 .bar{
-
-width:14px;
-
-background:#00eaff;
-
+width:12px;
+height:80px;
+background:#00e5ff;
 border-radius:20px;
-
-animation:music 1s infinite ease-in-out;
-
+animation:music 1s ease-in-out infinite;
 }
 
-.bar:nth-child(1){height:40px;}
-.bar:nth-child(2){height:90px;}
-.bar:nth-child(3){height:140px;}
-.bar:nth-child(4){height:70px;}
-.bar:nth-child(5){height:150px;}
-.bar:nth-child(6){height:90px;}
-.bar:nth-child(7){height:50px;}
-.bar:nth-child(8){height:120px;}
+.bar:nth-child(even){
+animation-delay:.3s;
+}
 
 @keyframes music{
 
 50%{
+height:25px;
+}
 
-transform:scaleY(.3);
+}
 
+@keyframes spin{
+
+100%{
+transform:rotate(360deg);
 }
 
 }
@@ -194,26 +188,20 @@ transform:scaleY(.3);
 @keyframes float{
 
 50%{
-
-transform:translateY(-12px);
-
+transform:translateY(-10px);
 }
 
 }
-.analytics{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-margin-bottom:25px;
+
+ul{
+padding-left:20px;
 }
 
-.analytics .card{
-text-align:center;
+li{
+margin:12px 0;
 }
 
-.analytics h1{
-font-size:40px;
-color:#00ffff;
-text-shadow:0 0 20px cyan;
-margin-top:10px;
+.left-panel,
+.right-panel{
+overflow:auto;
 }
