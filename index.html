@@ -11,17 +11,17 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="bg-grid"></div>
+<div class="background"></div>
 
 <header>
 
-<div class="brand">
+<div class="leftHeader">
 
 <img src="logo.png" class="logo">
 
@@ -35,13 +35,9 @@
 
 </div>
 
-<div class="header-right">
+<div class="rightHeader">
 
-<div id="weatherTemp">31°C</div>
-
-<div id="weatherCity">Jaipur</div>
-
-<div id="time">00:00:00</div>
+<div id="clock">00:00:00</div>
 
 <div id="date">Loading...</div>
 
@@ -49,81 +45,47 @@
 
 </header>
 
-<main>
+<div class="container">
 
-<!-- LEFT -->
-
-<section class="left">
+<aside class="left">
 
 <div class="card">
 
-<h2>📺 YOUTUBE</h2>
+<h2>🎙 NOW RECORDING</h2>
 
-<div id="youtubeSubs" class="big">Loading...</div>
+<h1>READY</h1>
 
-<p>Subscribers</p>
-
-<hr>
-
-<p id="youtubeViews">Views</p>
-
-<p id="youtubeVideos">Videos</p>
+<p>Waiting For Artist...</p>
 
 </div>
 
 <div class="card">
 
-<h2>📸 INSTAGRAM</h2>
-
-<div id="instaFollowers" class="big">Loading...</div>
-
-<p>Followers</p>
-
-<hr>
-
-<p id="instaPosts">Posts</p>
-
-</div>
-
-<div class="card">
-
-<h2>🎙 STUDIO</h2>
+<h2>🎧 STUDIO STATUS</h2>
 
 <p>✔ Mic Ready</p>
 
-<p>✔ Logic Pro</p>
+<p>✔ Logic Pro Connected</p>
 
-<p>✔ Internet</p>
+<p>✔ Internet Online</p>
 
-<p>✔ NAS</p>
+<p>✔ Speakers Ready</p>
 
 </div>
 
-</section>
-
-<!-- CENTER -->
+</aside>
 
 <section class="center">
 
 <div class="hud">
 
-<div class="ring ring1"></div>
+<div class="ring r1"></div>
 
-<div class="ring ring2"></div>
+<div class="ring r2"></div>
 
-<div class="ring ring3"></div>
+<div class="ring r3"></div>
 
 <img src="logo.png" class="centerLogo">
-
-</div>
-
-<div class="record">
-
-<h2>NOW RECORDING</h2>
-
-<h1>READY</h1>
-
-<p>Waiting for Artist...</p>
 
 </div>
 
@@ -137,16 +99,22 @@
 <div class="bar"></div>
 <div class="bar"></div>
 <div class="bar"></div>
-<div class="bar"></div>
-<div class="bar"></div>
 
 </div>
 
 </section>
 
-<!-- RIGHT -->
+<aside class="right">
 
-<section class="right">
+<div class="card">
+
+<h2>🌤 WEATHER</h2>
+
+<h1>31°C</h1>
+
+<p>Jaipur</p>
+
+</div>
 
 <div class="card">
 
@@ -160,31 +128,21 @@
 
 </div>
 
-<div class="card">
-
-<h2>🎵 LATEST RELEASE</h2>
-
-<p>Coming Soon...</p>
+</aside>
 
 </div>
 
-<div class="card">
+<footer>
 
-<h2>🤖 AI ASSISTANT</h2>
+<div>💾 NAS : ONLINE</div>
 
-<p>Studio Ready</p>
+<div>🌐 INTERNET : CONNECTED</div>
 
-<p>Internet Online</p>
+<div>💻 LOGIC PRO : READY</div>
 
-<p>Backup Active</p>
+<div>🔊 SPEAKERS : OK</div>
 
-<p>System Healthy</p>
-
-</div>
-
-</section>
-
-</main>
+</footer>
 
 <script src="app.js"></script>
 
