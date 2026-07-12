@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>Arrow Music Command Center</title>
 
 <link rel="stylesheet" href="style.css">
@@ -13,7 +17,7 @@
 
 <body>
 
-<div class="background-grid"></div>
+<div class="bg-grid"></div>
 
 <header>
 
@@ -31,7 +35,11 @@
 
 </div>
 
-<div class="clock-area">
+<div class="header-right">
+
+<div id="weatherTemp">31°C</div>
+
+<div id="weatherCity">Jaipur</div>
 
 <div id="time">00:00:00</div>
 
@@ -43,23 +51,23 @@
 
 <main>
 
-<!-- LEFT PANEL -->
+<!-- LEFT -->
 
-<section class="left-panel">
+<section class="left">
 
 <div class="card">
 
 <h2>📺 YOUTUBE</h2>
 
-<div class="number" id="youtubeSubs">Loading...</div>
+<div id="youtubeSubs" class="big">Loading...</div>
 
 <p>Subscribers</p>
 
 <hr>
 
-<div id="youtubeViews">Views</div>
+<p id="youtubeViews">Views</p>
 
-<div id="youtubeVideos">Videos</div>
+<p id="youtubeVideos">Videos</p>
 
 </div>
 
@@ -67,27 +75,27 @@
 
 <h2>📸 INSTAGRAM</h2>
 
-<div class="number" id="instaFollowers">Loading...</div>
+<div id="instaFollowers" class="big">Loading...</div>
 
 <p>Followers</p>
 
 <hr>
 
-<div id="instaPosts">Posts</div>
+<p id="instaPosts">Posts</p>
 
 </div>
 
 <div class="card">
 
-<h2>🎙 STUDIO STATUS</h2>
+<h2>🎙 STUDIO</h2>
 
-<p>🎤 Mic Ready</p>
+<p>✔ Mic Ready</p>
 
-<p>🎧 Headphones Connected</p>
+<p>✔ Logic Pro</p>
 
-<p>💻 Logic Pro Ready</p>
+<p>✔ Internet</p>
 
-<p>🌐 Internet Online</p>
+<p>✔ NAS</p>
 
 </div>
 
@@ -95,9 +103,9 @@
 
 <!-- CENTER -->
 
-<section class="center-panel">
+<section class="center">
 
-<img src="logo.png" class="center-logo">
+<div class="hud">
 
 <div class="ring ring1"></div>
 
@@ -105,7 +113,11 @@
 
 <div class="ring ring3"></div>
 
-<div class="record-box">
+<img src="logo.png" class="centerLogo">
+
+</div>
+
+<div class="record">
 
 <h2>NOW RECORDING</h2>
 
@@ -134,31 +146,25 @@
 
 <!-- RIGHT -->
 
-<section class="right-panel">
-
-<div class="card">
-
-<h2>🌤 WEATHER</h2>
-
-<div class="number" id="weatherTemp">31°C</div>
-
-<p id="weatherCity">Jaipur</p>
-
-</div>
+<section class="right">
 
 <div class="card">
 
 <h2>📅 TODAY</h2>
 
-<ul>
+<p>10:00 Recording</p>
 
-<li>10:00 Recording</li>
+<p>02:00 Mixing</p>
 
-<li>02:00 Mixing</li>
+<p>07:00 Mastering</p>
 
-<li>07:00 Mastering</li>
+</div>
 
-</ul>
+<div class="card">
+
+<h2>🎵 LATEST RELEASE</h2>
+
+<p>Coming Soon...</p>
 
 </div>
 
@@ -166,13 +172,13 @@
 
 <h2>🤖 AI ASSISTANT</h2>
 
-<p>✔ Studio Ready</p>
+<p>Studio Ready</p>
 
-<p>✔ Backup Active</p>
+<p>Internet Online</p>
 
-<p>✔ NAS Connected</p>
+<p>Backup Active</p>
 
-<p>✔ Internet Stable</p>
+<p>System Healthy</p>
 
 </div>
 
@@ -183,4 +189,5 @@
 <script src="app.js"></script>
 
 </body>
+
 </html>
