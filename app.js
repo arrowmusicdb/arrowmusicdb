@@ -53,3 +53,11 @@ window.onload = () => {
         document.body.style.opacity = "1";
     }, 100);
 };
+body{
+opacity:1;
+}
+
+img{
+max-width:100%;
+display:block;
+}
